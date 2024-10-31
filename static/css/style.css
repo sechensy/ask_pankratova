@@ -1,0 +1,82 @@
+:root{
+    --color1: #C0BFB2;
+    --color11: #9b9a8e;
+    --color2: #6F635B;
+    --color3: #A33436;
+    --color33: #c23d3f;
+    --color4: #FDFDF7;
+    --color5: #ECE6D3;
+}
+
+
+  .btn-bd-primary_my{
+    background-color: var(--color1);
+  }
+
+  .btn-bd-primary_my:hover{
+    background-color: var(--color11);
+  }
+
+.color5{
+    background-color: var(--color5);
+}
+
+/* .color3{
+    background-color: var(--color3);
+} */
+
+.custom-card-bg {
+    background-color:var(--color1); 
+}
+
+
+  /* скругление углов у карточек */
+.rounded-card {
+    border-radius: 30px; 
+}
+
+.rounded-button{
+    border-radius: 20px;
+}
+
+
+.btn-bd-red{
+    background-color: var(--color3);
+  }
+
+  .btn-bd-red:hover{
+    background-color: var(--color33);
+  }
+
+
+  .custom-shadow {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Насыщенная и глубокая тень */
+  }
+
+.color4{
+    color: var(--color4);
+}
+
+.color2{
+    color: var(--color2);
+}
+
+.pagination .page-link {
+    color: black;
+}
+
+.bg-color5{
+    background-color: var(--color5);
+}
+
+.color3{
+    color: var(--color3);
+}
+
+.bg-color3{
+    background-color: var(--color3);
+}
+
+.bg-color2{
+    background-color: var(--color2);
+}

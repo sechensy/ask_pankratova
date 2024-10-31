@@ -1,0 +1,70 @@
+{% extends 'layouts/base2.html' %}
+{% load static %}
+{% block content %}
+                
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label"></label>
+                    <div class="col-sm-9">
+                        <h1>Registration</h1>
+                    </div>
+                </div>
+
+                <form>
+                    <!-- <p class=" col-sm-8 text-center color3">Sorry, this email address already registred!</p> -->
+
+                    <div class="row mb-3 text-end">
+                        <label for="inputLogin" class="col-sm-3 col-form-label">Login</label>
+                        <div class="col-sm-5">
+                            <input id="inputLogin" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 text-end">
+                        <label for="inputEmail3" class="col-sm-3 col-form-label">Email</label>
+                        <div class="col-sm-5">
+                            <input type="email" class="form-control is-invalid" id="inputEmail3">
+                            <div class="invalid-feedback text-start">
+                                Sorry, this email address already registered!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 text-end">
+                        <label for="inputNickname" class="col-sm-3 col-form-label">NickName</label>
+                        <div class="col-sm-5">
+                            <input id="inputNickname" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 text-end">
+                        <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
+                        <div class="col-sm-5">
+                            <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 text-end">
+                        <label for="inputRepeatPassword" class="col-sm-3 col-form-label">Repeat password</label>
+                        <div class="col-sm-5">
+                            <input type="password" class="form-control" id="inputRepeatPassword">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="formFile" class="col-sm-3 col-form-label text-end">Upload avatar</label>
+                        <div class="col-sm-5">
+                            <div class="mb-3">
+                                <input class="form-control" type="file" id="formFile">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-9 offset-sm-3">
+                            <button type="submit" class="btn btn-bd-red text-light">Register!</button>
+                        </div>
+                    </div>
+                </form>
+
+               
+{% endblock %}

@@ -1,0 +1,34 @@
+
+<!--путь path('question/<int:question_id>) поэтому не считывает картинки, переходит в папку
+question (на уровень выше)-->
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+<div class="col-9">
+    <div class="d-flex flex-column gap-3">
+        {% include 'layouts/question1.html' %}
+
+        <div><h1> Answers </h1></div>
+
+
+        {% for answer in answers %}
+            {% include 'layouts/answer.html' %}
+        {% endfor %}
+
+        {% include 'layouts/pagination.html' %}
+
+        <form>
+            <div class="mb-3">
+                <div class="mb-3">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                              placeholder="Enter your answer here"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Answer</button>
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

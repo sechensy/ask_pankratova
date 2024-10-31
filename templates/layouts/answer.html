@@ -1,0 +1,42 @@
+{% load static %}
+
+<div class="card w-100 " style="width: 18rem;">
+                        <div class="card-body ">
+                            <div class="row">
+                                <div class="col-3 text-center">
+                                    <div class="text-center" style="height: 100px; overflow: hidden;">
+<!--                                        <img src="../static/img/noavatar.jpg" alt="Avatar" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: cover;">-->
+                                        <img src="{% static 'img/noavatar.jpg' %}" alt="Avatar" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: cover;">
+                                    </div>
+                                    <a href="#" class="color2">someone</a>
+                                    <div>
+                                        <button type="button" class="btn btn-light">
+                                            like <span class="badge bg-color3">1</span>
+                                        </button>
+                                        <button type="button" class="btn btn-light">
+                                            dislike <span class="badge bg-color3">0</span>
+                                        </button>
+                                        <input class="form-control" type="number" value="5" placeholder="Default input" aria-label="default input example">
+                                    </div>
+                                </div>
+                                <div class="col-9">
+
+                                    <p class="card-text">{{answer.text}}</p>
+
+                                    <div class="d-flex gap-5 ">
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                            <label class="form-check-label" for="gridCheck1">
+                                                Correct!
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                            </div>
+                        </div>
+                    </div>

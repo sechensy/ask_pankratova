@@ -1,0 +1,24 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+
+        <div class="d-flex gap-3 align-items-center">
+            <h1 class="color2">Tag: "{{ tag }}"</h1>
+        </div>
+
+
+            <div class="col-9">
+                <div class="d-flex flex-column gap-3">
+                    {% for question in questions %}
+                        {% include 'layouts/question_tag.html' %}
+                    {% endfor %}
+
+
+
+                </div>
+
+                {% include 'layouts/pagination.html' %}
+
+            </div>
+            {% endblock %}
+

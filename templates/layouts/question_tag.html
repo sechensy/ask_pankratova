@@ -1,0 +1,42 @@
+{% load static %}
+
+<div class="card w-100" style="width: 18rem;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3 text-center">
+                                    <div class="text-center" style="height: 100px; overflow: hidden;">
+<!--                                        <img src="../2722809.jpg" alt="Avatar" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: cover;">-->
+                                        <img src="{% static 'img/2722809.jpg' %}" alt="Avatar" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: cover;">
+
+                                    </div>
+                                    <a href="#" class="color2">dr pepper</a>
+                                    <div>
+                                        <button type="button" class="btn btn-light">
+                                            like <span class="badge bg-color3">4</span>
+                                        </button>
+                                        <button type="button" class="btn btn-light">
+                                            dislike <span class="badge bg-color3">2</span>
+                                        </button>
+                                        <input class="form-control" type="number" value="5" placeholder="Default input" aria-label="default input example">
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <h6 class="card-subtitle mb-2">30.05.24</h6>
+                                    <h4 class="card-title">{{question.title}}</h4>
+                                    <p class="card-text">{{question.text}}</p>
+
+                                    <div class="d-flex gap-5">
+                                            <a href="{% url 'one_question' question.id %}" class="btn btn-bd-primary_my rounded-button text-white"
+                                            style="font-size: 1rem; padding: 10px 30px;">Answers (4)</a>
+
+                                        <div>
+                                            Tags:
+                                            <a href="#" class="card-link color3">{{ tag }}</a>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>

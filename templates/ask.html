@@ -1,0 +1,54 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="col-9">
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"></label>
+        <div class="col-sm-9">
+            <h1>New question</h1>
+        </div>
+    </div>
+
+    <form>
+        <div class="row mb-3 text-end">
+            <label class="col-sm-3 col-form-label">Title</label>
+            <div class="col-sm-7">
+                <input class="form-control border border-black is-invalid" placeholder="Add question title">
+                <div class="invalid-feedback text-start">
+                    Please, add title.
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3 text-end">
+            <label class="col-sm-3 col-form-label">Text</label>
+            <div class="col-sm-7">
+                            <textarea class="form-control border border-black is-invalid" rows="10"
+                                      placeholder="Add a description of the question"></textarea>
+                <div class="invalid-feedback text-start">
+                    Please, add description.
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3 text-end">
+            <label class="col-sm-3 col-form-label">Tags</label>
+            <div class="col-sm-7">
+                <input class="form-control border border-black is-invalid" placeholder="Add tags">
+                <div class="invalid-feedback text-start">
+                    Please, add tags.
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row mb-3">
+            <div class="col-sm-9 offset-sm-3">
+                <button type="submit" class="btn btn-bd-red text-light">Ask!</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
