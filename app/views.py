@@ -29,15 +29,13 @@ ANSWERS = [
 
 def paginate(objects_list, request, per_page=10):
     paginator = Paginator(objects_list, per_page)
-    page_number = request.GET.get('page')  # Получаем номер страницы из параметров запроса
+    page_number = request.GET.get('page')  
 
     try:
         page = paginator.page(page_number)
     except PageNotAnInteger:
-        # Если page не является числом, возвращаем первую страницу
         page = paginator.page(1)
     except EmptyPage:
-        # Если page находится вне диапазона, возвращаем последнюю страницу
         page = paginator.page(paginator.num_pages)
 
     return page
@@ -56,15 +54,7 @@ def index(request):
         }
     )
 
-# def index(request):
-#     page_num = int(request.GET.get('page',1))
-#     paginator = Paginator(QUESTIONS, 5)
-#     page = paginator.page(page_num)
-#
-#     return render(
-#         request, 'index.html',
-#         context={'questions':page.object_list, 'page_obj':page}
-#     )
+
 
 def hot(request):
     hot_questions = copy.deepcopy(QUESTIONS)
@@ -150,15 +140,13 @@ def tag(request):
 
 
 def tag(request, tag_name):
-    # Фильтруем вопросы, которые содержат данный тег
     tagged_questions = [q for q in QUESTIONS if tag_name in q.get('tags', [])]
-    # tagged_questions = QUESTIONS[tag_name]
+    
 
 
-    # Пагинация списка вопросов по тегу
     paginated_questions = paginate(tagged_questions, request, per_page=5)
 
-    # Рендеринг страницы
+    
     return render(
         request,
         'tag.html',
